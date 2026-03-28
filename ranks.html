@@ -125,7 +125,6 @@ document.body.appendChild(p);
 
 </div>
 
-</div>
 </section>
 
 <!-- RANK POPUP -->
@@ -145,49 +144,44 @@ document.body.appendChild(p);
 
 <script>
 function openRank(rank){
-let title=document.getElementById('rankTitle');
-let img=document.getElementById('rankImg');
+  let title = document.getElementById('rankTitle');
+  let img = document.getElementById('rankImg');
 
-if(rank==='warrier'){
-function openRank(rank){
-let title=document.getElementById('rankTitle');
-let img=document.getElementById('rankImg');
+  if(rank === 'warrier'){
+    title.innerText = 'WARRIER Rank';
+    img.src = rank + '.jpg';
+  }
 
-if(rank==='warrier'){
-title.innerText='WARRIER Rank';
-img.src = rank + '.jpg';
-}
+  else if(rank === 'supreme'){
+    title.innerText = 'SUPREME Rank';
+    img.src = rank + '.jpg';
+  }
 
-if(rank==='supreme'){
-title.innerText='SUPREME Rank';
-img.src = rank + '.jpg';
-}
+  else if(rank === 'king'){
+    title.innerText = 'KING Rank';
+    img.src = rank + '.jpg';
+  }
 
-if(rank==='king'){
-title.innerText='KING Rank';
-img.src = rank + '.jpg';
-}
+  else if(rank === 'immortal'){
+    title.innerText = 'IMMORTAL Rank';
+    img.src = rank + '.jpg';
+  }
 
-if(rank==='immortal'){
-title.innerText='IMMORTAL Rank';
-img.src = rank + '.jpg';
-}
-
-openPopup('rankPopup');
+  openPopup('rankPopup');
 }
 
 function openQR(){
-openPopup('qrPopup');
+  openPopup('qrPopup');
 }
 
 function openPopup(id){
-document.getElementById('overlay').classList.add('active');
-document.getElementById(id).classList.add('active');
+  document.getElementById('overlay').classList.add('active');
+  document.getElementById(id).classList.add('active');
 }
 
 function closeAll(){
-document.getElementById('overlay').classList.remove('active');
-document.querySelectorAll('.popup').forEach(p=>p.classList.remove('active'));
+  document.getElementById('overlay').classList.remove('active');
+  document.querySelectorAll('.popup').forEach(p => p.classList.remove('active'));
 }
 </script>
 
