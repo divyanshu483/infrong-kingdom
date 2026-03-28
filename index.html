@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infrong Kingdom</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  background:#01040f;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ADVANCED BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  width:300%;
+  height:300%;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(77,163,255,0.2),transparent 40%),
+    radial-gradient(circle at 80% 70%,rgba(0,224,255,0.15),transparent 40%),
+    radial-gradient(circle at 50% 50%,#020611,#000);
+  animation:moveBg 25s infinite alternate ease-in-out;
+  z-index:-2;
+}
+
+@keyframes moveBg{
+  0%{transform:translate(0,0) scale(1)}
+  100%{transform:translate(-150px,-150px) scale(1.1)}
+}
+
+/* GRID LINES BACKGROUND */
+body::after{
+  content:"";
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-image:linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                   linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size:40px 40px;
+  z-index:-1;
+}
+
+/* PARTICLES */
+.particle{
+  position:fixed;
+  width:3px;
+  height:3px;
+  background:#4da3ff;
+  border-radius:50%;
+  opacity:0.6;
+  animation:float linear infinite;
+}
+
+@keyframes float{
+  from{transform:translateY(100vh)}
+  to{transform:translateY(-10vh)}
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  backdrop-filter:blur(10px);
+}
+
+.logo{
+  font-size:26px;
+  font-weight:700;
+  color:#4da3ff;
+  text-shadow:0 0 15px #4da3ff;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#ccc;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#4da3ff;
+  text-shadow:0 0 10px #4da3ff;
+}
+
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:70px;
+  background:linear-gradient(90deg,#4da3ff,#00e0ff);
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 20px #4da3ff}
+  to{text-shadow:0 0 60px #00e0ff}
+}
+
+.hero p{
+  margin-top:10px;
+  color:#aaa;
+  font-size:18px;
+}
+
+.btn{
+  margin-top:30px;
+  padding:14px 35px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(90deg,#4da3ff,#00e0ff);
+  color:#fff;
+  cursor:pointer;
+  font-size:16px;
+  transition:0.4s;
+}
+
+.btn:hover{
+  transform:scale(1.15);
+  box-shadow:0 0 40px #4da3ff;
+}
+
+.section{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.card-container{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+/* IMPROVED IP CARD */
+.card{
+  width:320px;
+  padding:35px;
+  border-radius:25px;
+  background:linear-gradient(145deg,rgba(77,163,255,0.1),rgba(0,0,0,0.6));
+  backdrop-filter:blur(20px);
+  position:relative;
+  overflow:hidden;
+  transition:0.5s;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  width:200%;
+  height:200%;
+  background:linear-gradient(45deg,transparent,#4da3ff,transparent);
+  animation:shine 4s linear infinite;
+}
+
+@keyframes shine{
+  0%{transform:rotate(0deg) translate(-100%)}
+  100%{transform:rotate(360deg) translate(100%)}
+}
+
+.card:hover{
+  transform:translateY(-15px) scale(1.1);
+  box-shadow:0 0 50px #4da3ff;
+}
+
+.ip-box{
+  margin-top:20px;
+  padding:15px;
+  font-size:18px;
+  letter-spacing:1px;
+  background:#000;
+  border-radius:12px;
+  cursor:pointer;
+  border:1px solid rgba(77,163,255,0.3);
+  transition:0.3s;
+}
+
+.ip-box:hover{
+  background:#020617;
+  box-shadow:0 0 20px #4da3ff;
+  transform:scale(1.05);
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<script>
+for(let i=0;i<50;i++){
+  let p=document.createElement("div");
+  p.className="particle";
+  p.style.left=Math.random()*100+"vw";
+  p.style.animationDuration=(6+Math.random()*10)+"s";
+  document.body.appendChild(p);
+}
+</script>
+
+<header>
+  <div class="logo">INFRONG KINGDOM</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#server">Server</a>
+    <a href="store.html">Store</a>
+    <a href="#discord">Discord</a>
+    
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>INFRONG KINGDOM</h1>
+  <p>Ultimate Minecraft Experience</p>
+  <button class="btn" onclick="scrollToSection('server')">Start Playing</button>
+</section>
+
+<section class="section" id="server">
+  <h2>Server IP</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Connect Now</h3>
+      <div class="ip-box" onclick="copyIP()">in-2.hgnetwork.xyz:25568</div>
+      <p style="margin-top:10px;color:#aaa">Click to copy instantly</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="discord">
+  <h2>Join Discord</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Community</h3>
+      <button class="btn" onclick="joinDiscord()">Join Now</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 INFRONG Network
+</footer>
+
+<script>
+function copyIP(){
+  navigator.clipboard.writeText("in-2.hgnetwork.xyz:25568");
+  alert("IP Copied!");
+}
+
+function joinDiscord(){
+  window.open("https://discord.gg/JQKW847MnJ","_blank");
+}
+
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
