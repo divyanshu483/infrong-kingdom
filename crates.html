@@ -103,26 +103,29 @@ document.body.appendChild(p);
 <h2>CRATES</h2>
 <div class="card-container">
 
-<div class="CRATES-card" onclick="openCRATES('warrier')">
-<h3>WARRIER</h3>
+<div class="CRATES-card" onclick="openCRATES('vote')">
+<h3>vote</h3>
 <div class="price">₹600</div>
 </div>
 
-<div class="CRATES-card" onclick="openCRATES('supreme')">
-<h3>SUPREME</h3>
+<div class="CRATES-card" onclick="openCRATES('spawner')">
+<h3>spawner</h3>
 <div class="price">₹1000</div>
 </div>
   
-<div class="CRATES-card" onclick="openCRATES('king')">
-<h3>KING</h3>
+<div class="CRATES-card" onclick="openCRATES('rare')">
+<h3>RARE</h3>
 <div class="price">₹1200</div>
 </div>
   
-<div class="CRATES-card" onclick="openCRATES('immortal')">
-<h3>IMMORTAL</h3>
+<div class="CRATES-card" onclick="openCRATES('party')">
+<h3>party</h3>
 <div class="price">₹1300</div>
 </div>
-  
+<div class="CRATES-card" onclick="openCRATES('ultimate')">
+<h3>ULTIMATE</h3>
+<div class="price">₹1300</div>
+</div>
 </div>
 </section>
 
@@ -146,21 +149,25 @@ function openCRATES(CRATES){
 let title=document.getElementById('CRATESTitle');
 let img=document.getElementById('CRATESImg');
 
-if(CRATES==='warrier'){
-title.innerText='WARRIER CRATES';
+if(CRATES==='vote'){
+title.innerText='vote CRATES';
 img.src = CRATES + '.jpg';
 }
 
-if(CRATES==='supreme'){
-title.innerText='SUPREME CRATES';
+if(CRATES==='spawner'){
+title.innerText='spawner CRATES';
 img.src = CRATES + '.jpg';
 }
-if(CRATES==='king'){
-title.innerText='KING CRATES';
+if(CRATES==='rare'){
+title.innerText='RARE CRATES';
 img.src = CRATES + '.jpg';
 }
-if(CRATES==='immortal'){
-title.innerText='IMMORTAL CRATES';
+if(CRATES==='party'){
+title.innerText='party CRATES';
+img.src = CRATES + '.jpg';
+}
+if(CRATES==='ultimate'){
+title.innerText='ULTIMATE CRATES';
 img.src = CRATES + '.jpg';
 }
 
