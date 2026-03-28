@@ -103,14 +103,26 @@ document.body.appendChild(p);
 <h2>RANKS</h2>
 <div class="card-container">
 
-<div class="rank-card" onclick="openRank('vip')">
-<h3>VIP</h3>
-<div class="price">₹99</div>
+<div class="rank-card" onclick="openRank('warrier')">
+<h3>WARRIER</h3>
+<div class="price">₹600</div>
 </div>
 
-<div class="rank-card" onclick="openRank('mvp')">
-<h3>MVP</h3>
-<div class="price">₹199</div>
+<div class="rank-card" onclick="openRank('supreme')">
+<h3>SUPREME</h3>
+<div class="price">₹1000</div>
+</div>
+
+<div class="rank-card" onclick="openRank('king')">
+<h3>KING</h3>
+<div class="price">₹1200</div>
+</div>
+
+<div class="rank-card" onclick="openRank('immortal')">
+<h3>IMMORTAL</h3>
+<div class="price">₹1300</div>
+</div>
+
 </div>
 
 </div>
@@ -136,13 +148,28 @@ function openRank(rank){
 let title=document.getElementById('rankTitle');
 let img=document.getElementById('rankImg');
 
-if(rank==='vip'){
-title.innerText='VIP Rank';
+if(rank==='warrier'){
+function openRank(rank){
+let title=document.getElementById('rankTitle');
+let img=document.getElementById('rankImg');
+
+if(rank==='warrier'){
+title.innerText='WARRIER Rank';
 img.src = rank + '.jpg';
 }
 
-if(rank==='mvp'){
-title.innerText='MVP Rank';
+if(rank==='supreme'){
+title.innerText='SUPREME Rank';
+img.src = rank + '.jpg';
+}
+
+if(rank==='king'){
+title.innerText='KING Rank';
+img.src = rank + '.jpg';
+}
+
+if(rank==='immortal'){
+title.innerText='IMMORTAL Rank';
 img.src = rank + '.jpg';
 }
 
